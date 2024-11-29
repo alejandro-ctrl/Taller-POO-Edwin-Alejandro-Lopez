@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 8: Biblioteca</h1>
+
+    <form id="formularioLibro">
+        <label for="nombreTitulo">Título del Libro:</label>
+        <input type="text" id="nombreTitulo" required><br><br>
+
+        <label for="autor">Autor del Libro:</label>
+        <input type="text" id="autor" required><br><br>
+
+        <label for="tipo">Tipo de Libro:</label>
+        <select id="tipo" required onchange="mostrarCampos()">
+            <option value="">Seleccione un tipo</option>
+            <option value="digital">Digital</option>
+            <option value="fisico">Físico</option>
+        </select><br><br>
+
+        <div id="campoDigital" style="display: none;">
+            <label for="formato">Formato del Libro Digital:</label>
+            <input type="text" id="formato"><br><br>
+        </div>
+
+        <div id="campoFisico" style="display: none;">
+            <label for="paginas">Número de Páginas:</label>
+            <input type="number" id="paginas"><br><br>
+        </div>
+
+        <button type="button" onclick="agregarLibro()">Agregar Libro</button>
+        <button type="button" onclick="listarLibros()">Listar Todos los Libros</button>
+        <button type="button" onclick="listarLibrosPorAutor()">Buscar Libros por Autor</button>
+
+    <h2>Libros Agregados</h2>
+    <div id="listadoLibros"></div>
+
+    <h2>Lista de Todos los Libros</h2>
+    <ul id="listaLibros"></ul>
+
+
+    <h2>Buscar Libros por Autor</h2>
+    <input type="text" id="BusquedaPorAutor" placeholder="Ingrese el autor">
+
+    <ul id="listaLibrosPorAutor"></ul>
+</form>
+
+<script src="8.js" ></script>
+</body>
+</html>

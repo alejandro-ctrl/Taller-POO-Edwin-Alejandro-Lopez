@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: beige;">
+    <h1>Ejercicio 3</h1>
+    <h2>Inventario de Productos</h2>
+    
+    <form id="product-form">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" placeholder="ingresa el nombre del producto" required><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" placeholder="ingresa el precio del producto" required><br><br>
+
+        <label for="cantidad">Cantidad en Stock:</label>
+        <input type="number" id="cantidad" placeholder="ingresa el stock del producto" required><br><br>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" placeholder="ingresa la marca del producto"><br><br>
+
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <h2>Todos los productos:</h2>
+    <div class="product-list" id="todos-los-productos"></div>
+
+    <h2>Productos con baja cantidad en stock:</h2>
+    <div class="product-list" id="productos-bajo-stock"></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
